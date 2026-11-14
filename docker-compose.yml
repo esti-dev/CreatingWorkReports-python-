@@ -1,0 +1,11 @@
+services:
+  attendance_app:
+    build: .
+    container_name: creatingworkreports
+    volumes:
+      - .:/app
+      - ./output:/app/output
+    working_dir: /app
+    environment:
+      - PYTHONPATH=/app
+    command: python -m main
